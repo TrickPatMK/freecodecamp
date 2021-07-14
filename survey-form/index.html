@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">short explaination</p>
+    <form action="#" id="survey-form">
+      <fieldset>
+        <label for="name" id="name-label">
+          <p>Name:</p>
+          <input
+            type="text"
+            placeholder="Input your name.."
+            id="name"
+            name="name"
+            required
+          />
+        </label>
+        <label for="email" id="email-label">
+          Email:
+          <input
+            type="email"
+            placeholder="example@yourdomain.com"
+            id="email"
+            name="email"
+            required
+          />
+        </label>
+        <label for="number" id="number-label">
+          Number:
+          <input
+            type="number"
+            name="number"
+            id="number"
+            min="0"
+            max="999"
+            placeholder="Your number phone... "
+            required
+          />
+        </label>
+        <label for="dropdown"> dropdown </label>
+        <label for="checkbox">
+          <input type="checkbox" name="" id="checkbox" />
+        </label>
+
+        <button type="submit" id="submit">Submit</button>
+      </fieldset>
+    </form>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
