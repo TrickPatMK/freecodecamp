@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Serif", serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+nav {
+  background-color: #22229a;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-left: 20px;
+  margin: 0;
+  height: 7vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main figure img {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+main figcaption p {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+main article {
+  width: 100%;
+  background-color: #cccccc;
+  padding-bottom: 8rem;
+}
+
+main article .container {
+  padding: 1rem 2rem;
+  margin: 0 auto;
+}
+
+main article .container section ul li p {
+  line-height: 1rem;
+}
+
+main article .container p {
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+
+main article .container a {
+  color: black;
+}
+
+main article .container a:hover {
+  color: midnightblue;
+}
+
+footer {
+  background-color: midnightblue;
+  height: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer p {
+  margin: 0;
+  color: gainsboro;
+  font-size: 0.8rem;
+}
+
+.button-wrapper .btn-scroll-up {
+  position: fixed;
+  right: 5vw;
+  bottom: 8vh;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: #7575e0;
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+}
+
+.button-wrapper .btn-scroll-up:hover {
+  -webkit-animation: jump-up 0.5s ease-in-out;
+          animation: jump-up 0.5s ease-in-out;
+}
+
+@-webkit-keyframes jump-up {
+  0% {
+    bottom: 8vh;
+  }
+  50% {
+    bottom: 10vh;
+  }
+  100% {
+    bottom: 8vh;
+  }
+}
+
+@keyframes jump-up {
+  0% {
+    bottom: 8vh;
+  }
+  50% {
+    bottom: 10vh;
+  }
+  100% {
+    bottom: 8vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 60vw;
+  }
+}
+/*# sourceMappingURL=main.css.map */

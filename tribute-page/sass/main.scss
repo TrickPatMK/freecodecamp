@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+
+$base-color: midnightblue;
+
+@mixin link-format($color) {
+  text-decoration: none;
+  color: $color;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Serif", serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: lighten($base-color, 10);
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 20px;
+    margin: 0;
+    height: 7vh;
+    align-items: center;
+    li {
+      list-style: none;
+      a {
+        @include link-format(white);
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  figure img {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  figcaption p {
+    font-size: 0.9rem;
+    color: lighten($color: #000000, $amount: 50);
+  }
+
+  article {
+    width: 100%;
+    background-color: darken($color: white, $amount: 20);
+    padding-bottom: 8rem;
+    .container {
+      padding: 1rem 2rem;
+      margin: 0 auto;
+
+      section ul li p {
+        line-height: 1rem;
+      }
+
+      p {
+        line-height: 1.5rem;
+        font-size: 1rem;
+      }
+
+      a {
+        color: black;
+      }
+      a:hover {
+        color: $base-color;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $base-color;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    margin: 0;
+    color: darken(whitesmoke, 10);
+    font-size: 0.8rem;
+  }
+}
+
+.button-wrapper .btn-scroll-up {
+  position: fixed;
+  right: 5vw;
+  bottom: 8vh;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: lighten($color: $base-color, $amount: 40);
+  @include link-format(white);
+  padding: 10px 15px;
+
+  &:hover {
+    animation: jump-up 0.5s ease-in-out;
+  }
+
+  @keyframes jump-up {
+    0% {
+      bottom: 8vh;
+    }
+
+    50% {
+      bottom: 10vh;
+    }
+
+    100% {
+      bottom: 8vh;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 60vw;
+  }
+}
