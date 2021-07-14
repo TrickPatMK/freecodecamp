@@ -1,19 +1,32 @@
-#survey-form fieldset {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(salmon), to(#72ecfa));
+  background: linear-gradient(salmon, #72ecfa);
+  font-family: "Comfortaa", cursive;
+}
+
+.form-header {
+  margin-top: 10vh;
+}
+
+.form-header h1 {
+  text-align: center;
+}
+
+.form-header p {
+  text-align: center;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  margin: 1rem auto;
+  line-height: 1.5rem;
+}
+
+form fieldset {
+  background-color: #cccccc;
   border: none;
-  background-color: rgba(102, 102, 102, 0.7);
-}
-
-#survey-form fieldset label {
+  border-radius: 20px;
+  padding: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,13 +34,75 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 10px auto;
+  opacity: 0.8;
 }
 
-#survey-form fieldset input {
-  width: 40vw;
-  height: 30px;
+form fieldset .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+}
+
+form fieldset .form-group label {
+  padding-bottom: 10px;
+}
+
+form fieldset .form-group #name,
+form fieldset .form-group #email,
+form fieldset .form-group #number,
+form fieldset .form-group #wish,
+form fieldset .form-group #dropdown {
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+form fieldset .form-group #name:focus-visible,
+form fieldset .form-group #email:focus-visible,
+form fieldset .form-group #number:focus-visible,
+form fieldset .form-group #wish:focus-visible,
+form fieldset .form-group #dropdown:focus-visible {
+  outline: 1px auto salmon;
+}
+
+form fieldset .form-group #dropdown {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+form fieldset textarea {
+  resize: vertical;
+  font-family: "Open Sans", sans-serif;
+}
+
+form fieldset button {
+  font-size: 1rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   border-radius: 10px;
-  border: none;
+  padding: 10px 15px;
+  border: 2px solid rgba(167, 165, 165, 0.4);
+}
+
+button:hover {
+  outline: 1px auto salmon;
+}
+
+@media (min-width: 768px) {
+  .form-header p {
+    max-width: 60vw;
+    margin: 1rem auto;
+  }
+  form {
+    max-width: 60vw;
+    margin: 0 auto;
+  }
 }
 /*# sourceMappingURL=main.css.map */
